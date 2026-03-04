@@ -1,13 +1,12 @@
 import { NextResponse } from 'next/server';
-import dbConnection from '@/lib/mongo';
-import User from '@/lib/models/User';
+import dbConnection from '@/lib/db';
+import User from '@/models/User';
 
 export async function POST(request) {
   try {
     await dbConnection();
     const { email, password } = await request.json();
 
-    // Validation
     if (!email || !password) {
       return NextResponse.json(
         { error: 'Email and password are required' },
@@ -15,7 +14,6 @@ export async function POST(request) {
       );
     }
 
-    // Find user
     const user = await User.findOne({ email });
     if (!user) {
       return NextResponse.json(
@@ -24,7 +22,6 @@ export async function POST(request) {
       );
     }
 
-    // Check password
     const isPasswordValid = await user.matchPassword(password);
     if (!isPasswordValid) {
       return NextResponse.json(
@@ -33,7 +30,6 @@ export async function POST(request) {
       );
     }
 
-    // In a real app, you would create a session/JWT here
     return NextResponse.json(
       {
         message: 'Login successful',
