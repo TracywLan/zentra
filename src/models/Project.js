@@ -1,19 +1,26 @@
 import mongoose from "mongoose";
 
+
 const ProjectSchema = new mongoose.Schema(
     {
-        name: {
+        title: {
             type: String,
-            require: true,
+            require: [true, "Project title is required"],
+            trim: true,
         },
         description: String,
-        owner: {
+        userId: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User",
             require: true,
+        },
+        status: {
+            type: String,
+            enum: ["active", "completed", "archived"],
+            default: "active",
         },
     },
     { timestamps: true }
 )
 
-export default mongoose.model("Project", ProjectSchema)
+export default mongoose.models.Project || mongoose.model("Project", ProjectSchema);

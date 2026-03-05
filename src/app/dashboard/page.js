@@ -1,5 +1,7 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
+import dbConnect from "@/lib/mongoose";
+import Project from "@/models/Project";
 
 export default async function Dashboard() {
   const session = await auth();
@@ -7,6 +9,10 @@ export default async function Dashboard() {
   if (!session) {
     redirect("/login");
   }
+
+  await dbConnect();
+
+  const rawProjects = await Project.find({ userId: session.user.id }).lean();
 
   return (
     <div className="p-8">
