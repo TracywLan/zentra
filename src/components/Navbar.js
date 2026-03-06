@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { auth } from "@/auth";
-import SignIn from "./auth/SignIn";
+import SignIn from "./auth/LoginButton";
 import SignOut from "./auth/SignOut";
-import { useSession } from "next-auth/react";
+
 
 
 
@@ -14,15 +14,17 @@ export default async function Navbar() {
             <Link href="/" className="text-xl font-bold">
                 Zentra
             </Link>
-
-            <div className="flex items-center gap-4 text-med font-medium">
+            <div className="flex items-center gap-4 text-med font-medium" >
                 {session ? (
                     <>
-                        <span>
+                        {/* <span>
                             {session.user.name}
-                        </span>
-                        <Link href="/dashboard">
+                        </span> */}
+                        <Link href="/dashboard" className="px-4 py-2 rounded hover:bg-gray-300 transition-colors">
                             Dashboard
+                        </Link>
+                        <Link href='/projects' className="px-4 py-2 rounded hover:bg-gray-300 transition-colors">
+                            Projects
                         </Link>
                         <SignOut />
                     </>
@@ -33,5 +35,3 @@ export default async function Navbar() {
         </nav>
     )
 }
-
-// TODO: Add button look for sign-in and sign-out
