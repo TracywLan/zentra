@@ -1,33 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import SessionProvider from "@/lib/SessionProvider";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import AuthProvider from "@/components/AuthProvider";
 
 export const metadata = {
-  title: "Zentra",
-  description: "Secure GitHub Authentication with Auth.js",
+  title: "Zentra | Sprint Management",
+  description: "Lightweight sprint-based development management system",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body>
-        <SessionProvider>
+        <AuthProvider>
           <Navbar />
-          <main>
-            {children}
-          </main>
-        </SessionProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

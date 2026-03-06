@@ -1,17 +1,23 @@
-"use client"; 
-import { signIn } from "next-auth/react";
+import { redirect } from "next/navigation";
+import { auth } from "@/auth";
+import LoginButton from "@/components/auth/LoginButton";
 
-export default function Login() {
+export default async function LoginPage() {
+  const session = await auth();
+
+  if (session) {
+    redirect("/dashboard");
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-      <h1 className="text-2xl font-bold">Welcome Back</h1>
-      <button 
-        onClick={() => signIn("github", { callbackUrl: "/" })}
-        className="px-6 py-3 text-white bg-gray-900 rounded-md hover:bg-gray-800"
-      >
-        Sign in with GitHub
-      </button>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+      <div className="max-w-md w-full space-y-8 p-8 bg-white rounded-xl shadow-md text-center">
+        <h2 className="text-3xl font-extrabold text-gray-900">Zentra</h2>
+        <p className="text-gray-500 mt-2">Sign in to manage your sprints</p>
+        <div className="mt-8">
+          <LoginButton />
+        </div>
+      </div>
     </div>
   );
 }
-
