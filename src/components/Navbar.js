@@ -2,7 +2,6 @@ import Link from "next/link";
 import { auth } from "@/auth";
 import SignIn from "./auth/SignIn";
 import SignOut from "./auth/SignOut";
-import { useSession } from "next-auth/react";
 
 
 
@@ -24,6 +23,9 @@ export default async function Navbar() {
                         <Link href="/dashboard">
                             Dashboard
                         </Link>
+                        <Link href='/projects'>
+                            Projects
+                        </Link>
                         <SignOut />
                     </>
                 ) : (
@@ -33,5 +35,3 @@ export default async function Navbar() {
         </nav>
     )
 }
-
-// TODO: Add button look for sign-in and sign-out

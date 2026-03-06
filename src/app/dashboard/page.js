@@ -1,6 +1,6 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import dbConnect from "@/lib/mongoose";
+import dbConnect from "@/lib/mongo";
 import Project from "@/models/Project";
 
 export default async function Dashboard() {

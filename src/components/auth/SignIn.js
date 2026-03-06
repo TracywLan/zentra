@@ -1,14 +1,11 @@
-import { signIn } from "@/auth"
-    
-export default function SignIn() {
+"use client";
+
+import { signIn } from "next-auth/react";
+
+export default function LoginButton() {
     return (
-        <form
-        action={async () => {
-            "use server"
-            await signIn("github", { redirectTo: "/dashboard"})
-        }}
-        >
-        <button type="submit">Sign In</button>
-        </form>
-    )
-} 
+        <button onClick={() => signIn()}>
+        Sign In
+        </button>
+    );
+}
