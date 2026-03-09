@@ -8,7 +8,7 @@ export default function AddProjectToggle() {
 
     if (showForm) {
         return (
-            <div className="mb-8">
+            <div className="mb-8 ">
                 <ProjectForm onSuccess={() => setShowForm(false)} />
             </div>
         );
@@ -17,7 +17,7 @@ export default function AddProjectToggle() {
     return (
         <button 
             onClick={() => setShowForm(true)}
-            className="mb-8 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors font-bold shadow-sm flex items-center gap-2"
+            className="mb-8 bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors font-bold shadow-sm flex items-center gap-2 hover:cursor-pointer"
         >
             Add New Project
         </button>

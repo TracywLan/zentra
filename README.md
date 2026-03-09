@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Zentra  
+
+
+### A Modern Project Management App
+
+**Zentra** is a sleek and intuitive project management application built to help individuals and teams stay organized, plan efficiently, and track project progress. Whether you’re managing personal tasks or collaborating on team goals, Zentra simplifies the process with powerful features and a smooth user experience.
+
+***
+
+## About the Project
+
+I created **Zentra** as a full-stack web app to challenge myself with learning in Next.js, and applying modern UI styling with Tailwind CSS. The goal was to build a responsive, data-driven tool that could help developers and teams better manage their projects. This idea came to my mind when I was doing our last project as a team, I though it would be great at the time to have an app that could break down tasks for a project and assign them to team members. 
+
+**Key Features:**
+- Create, update, and delete projects and tasks  
+- Track project status and progress 
+- Manage team members and assignments  
+- Responsive design
+
+***
 
 ## Getting Started
 
-First, run the development server:
+**Live App:** [Deployed on Vercel](https://zentra-pearl.vercel.app/)  
+**Planning Materials:** [Project Planning Document or Trello Board](https://trello.com/b/tTQoWjnC)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+***
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js** – React framework
+- **JavaScript** - Core language
+- **MongoDB + Mongoose** – data storage and modeling  
+- **Tailwind CSS** – CSS responsive UI  
+- **Vercel** – Deployment and hosting  
 
-## Learn More
+***
 
-To learn more about Next.js, take a look at the following resources:
+## Attributions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)  
+- [Auth.js](https://authjs.dev)
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [MongoDB](https://www.mongodb.com/)  
+- [Mongoose](https://mongoosejs.com/)
+- App logo designed with [Gemini](https://gemini.google.com/app)
+- App favicon designed with [Favicon.io](https://favicon.io/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+***
 
-## Deploy on Vercel
+## Next Steps
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Planned future improvements:
+- Graphs and charts to keep track and progress of projects
+- Kanban-style task board view  
+- File and comment attachments for each task  
+- Calendar view for tracking deadlines  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+***
