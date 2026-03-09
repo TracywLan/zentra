@@ -1,5 +1,5 @@
 # Zentra  
-
+[Zentra](public/logo1.png)
 
 ### A Modern Project Management App
 
