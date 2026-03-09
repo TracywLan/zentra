@@ -4,7 +4,6 @@
 
 **Zentra** is a sleek and intuitive project management application built to help individuals and teams stay organized, plan efficiently, and track project progress. Whether you’re managing personal tasks or collaborating on team goals, Zentra simplifies the process with powerful features and a smooth user experience.
 
-***
 
 ## About the Project
 
@@ -16,7 +15,6 @@ I created **Zentra** as a full-stack web app to challenge myself with learning i
 - Manage team members and assignments  
 - Responsive design
 
-***
 
 ## Getting Started
 
@@ -24,7 +22,6 @@ I created **Zentra** as a full-stack web app to challenge myself with learning i
 **Planning Materials:** [Project Planning Document or Trello Board](https://trello.com/b/tTQoWjnC)
 
 
-***
 
 ## Technologies Used
 
@@ -34,7 +31,7 @@ I created **Zentra** as a full-stack web app to challenge myself with learning i
 - **Tailwind CSS** – CSS responsive UI  
 - **Vercel** – Deployment and hosting  
 
-***
+
 
 ## Attributions
 
@@ -46,7 +43,7 @@ I created **Zentra** as a full-stack web app to challenge myself with learning i
 - App logo designed with [Gemini](https://gemini.google.com/app)
 - App favicon designed with [Favicon.io](https://favicon.io/)
 
-***
+
 
 ## Next Steps
 
@@ -57,4 +54,3 @@ Planned future improvements:
 - Calendar view for tracking deadlines  
 
 
-***
